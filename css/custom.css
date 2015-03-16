@@ -12,12 +12,12 @@ ul .nav {
 }
 
 footer {
-	background-color: #e74c3c;
-	padding-top: 150px;
+	background-color: #3CB4FF;
+	padding-top: 50px;
 	padding-bottom: 30px;
 }
 
-#get-involved {
+#convenience {
 	background-color: #f5f5f5;
 }
 
@@ -49,7 +49,7 @@ footer {
 }
 
 .homepage h2, .homepage h3 {
-	color: #e74c3c;
+	color: #3CB4FF;
 	font-family: 'Arvo', courier, serif;
 	text-transform: uppercase;	
 }
@@ -68,18 +68,18 @@ footer {
 }
 
 .homepage a {
-	color:#e74c3c;
+	color:#3CB4FF;
 }
 
 .homepage hr {
-	border-color: #e74c3c;
-	border-top: 1px solid#e74c3c;
+	border-color: #3CB4FF;
+	border-top: 1px solid#3CB4FF;
 	width: 160px;
 	margin-top: 15px;
 }
 
 .homepage a:hover {
-	color: #e74c3c;
+	color: #3CB4FF;
 	text-decoration: none;
 	opacity: .8;
 }
