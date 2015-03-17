@@ -7,7 +7,7 @@ ul.nav, .jumbotron h1 {
 	font-family: 'Arvo', courier, serif;
 }
 
-ul .nav {
+ul.nav {
 	font-size: 13px;
 }
 
@@ -68,7 +68,13 @@ footer {
 }
 
 .homepage a {
-	color:#3CB4FF;
+	color: #3CB4FF;
+}
+
+.homepage a:hover {
+	color: #3CB4FF;
+	text-decoration: none;
+	opacity: .8;
 }
 
 .homepage hr {
@@ -76,12 +82,6 @@ footer {
 	border-top: 1px solid#3CB4FF;
 	width: 160px;
 	margin-top: 15px;
-}
-
-.homepage a:hover {
-	color: #3CB4FF;
-	text-decoration: none;
-	opacity: .8;
 }
 
 /* Responsive styling */
@@ -131,16 +131,6 @@ footer {
 		width: 80%;
 	}
 	
-
-
-
-
-
-
-
-
-
-
 
 
 
