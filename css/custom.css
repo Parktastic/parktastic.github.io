@@ -25,7 +25,7 @@ footer {
 	text-align: center;
 	background-image: url('../images/hero-image.jpg');
 	color: white;
-}
+	}
 
 .jumbotron h1 {
 	margin-top: 30px;
@@ -36,6 +36,13 @@ footer {
 	margin-bottom: 30px;
 	font-weight: 100;
 	padding: 0 50px;
+}
+
+.jumbotron .form-control {
+	height: 54px;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .btn-lg {
