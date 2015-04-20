@@ -3,6 +3,30 @@ body {
   padding-top: 50px;
 }
 
+.btn-labeled {
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #FFFFFF !important;
+}
+
+.btn-label {
+  position: relative;
+  background: 0 0;
+  background: rgba(0,0,0,.15);
+  display: inline-block;
+  padding: 6px 12px;
+  left: -12px;
+  border-radius: 3px 0 0 3px;
+}
+
+.btn-bg-custom-color {
+	background-color: #9ACA27;
+}
+
+.txt-align-left {
+	text-align: left;
+}
+
 ul.nav, .jumbotron h1 {
 	font-family: 'Quicksand', sans-serif;
 }
@@ -43,7 +67,6 @@ footer {
 .jumbotron h1 {
 	margin-top: 30px;
 	margin-bottom: 50px;
-	padding: 0 100px;
 }
 
 .jumbotron p {
