@@ -43,7 +43,7 @@ h3{
     display: inline-block;
     font-size: 45px;
     line-height: 90px;
-    cursor: pointer;
+    cursor: default;
     margin: 20px;
     width: 90px;
     height: 90px;
@@ -160,6 +160,11 @@ h3{
 .btn-bg-custom-color {
 	background-color: #9ACA27;
 	color: #fff !important;
+	border-color: rgba(255, 255, 255, 0);
+}
+
+.btn-bg-custom-color:hover {
+	border-color: rgba(255, 255, 255, 0);
 }
 
 .txt-align-left {
