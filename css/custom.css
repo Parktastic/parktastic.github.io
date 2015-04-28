@@ -347,8 +347,8 @@ ul {
 		font-size: 18px;
 	}
 
-	footer img {
-		width: 80%;
+	#footer {
+		color: white;
 	}
 	
 	#mce-EMAIL{
