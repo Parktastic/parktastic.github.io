@@ -112,7 +112,7 @@ h3{
     top: -7px;
     left: -7px;
     padding: 7px;
-    box-shadow: 0 0 0 4px #641E64;
+    box-shadow: 0 0 0 4px #880E4F;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -webkit-transform: scale(.8);
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -125,7 +125,7 @@ h3{
 
 /* Effect 1a */
  .hovicon.effect-1.sub-a:hover {
-    background: #641E64;
+    background: #880E4F;
     color: #B28EB2;
 }
 
@@ -158,7 +158,7 @@ h3{
 }
 
 .btn-bg-custom-color {
-	background-color: #9ACA27;
+	background-color: #00796B;
 	color: #fff !important;
 	border-color: rgba(255, 255, 255, 0);
 }
@@ -181,7 +181,7 @@ ul.nav {
 }
 
 footer {
-	background-color: #3C193C;
+	background-color: #9B9B9B;
 	padding-top: 50px;
 	padding-bottom: 30px;
 }
@@ -197,7 +197,7 @@ footer {
 }
 
 #back-to-top a {
-	color: #9ACA27;
+	color: #00796B;
 }
 .jumbotron {
 	text-align: center;
@@ -218,7 +218,7 @@ footer {
 .form-control {
 	height: 44px;
 	font-size: 22px;
-	color: #9ACA27;
+	color: #00796B;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -242,7 +242,7 @@ footer {
 }
 
 .homepage h2, .homepage h3 {
-	color: #641E64;
+	color: #880E4F;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;	
@@ -264,18 +264,18 @@ footer {
 }
 
 .homepage a {
-	color: #641E64;
+	color: #880E4F;
 }
 
 .homepage a:hover {
-	color: #641E64;
+	color: #880E4F;
 	text-decoration: none;
 	opacity: .8;
 }
 
 .homepage hr {
-	border-color: #641E64;
-	border-top: 1px solid#641E64;
+	border-color: #880E4F;
+	border-top: 1px solid#880E4F;
 	width: 160px;
 	margin-top: 15px;
 }
