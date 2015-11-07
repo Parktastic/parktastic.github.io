@@ -1,0 +1,43 @@
+<ion-view title="Dashboard">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-clear button-positive" ng-click="doSomething()">
+            Home
+        </button>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        <div class="list">
+            <a class="item item-icon-left" ui-sref="search">
+                <i class="icon ion-search"></i>
+                Search
+            </a>
+
+            <a class="item item-icon-left item-icon-right" ui-sref="pendingRequests">
+                <i class="icon  ion-android-mail"></i>
+                    Pending Requests
+                <span class="badge badge-assertive" ng-hide="requestCount == 0">{{requestCount}}</span>
+            </a>
+
+            <a class="item item-icon-left item-icon-right" ui-sref="messages">
+                <i class="icon ion-chatbubbles"></i>
+                Messages
+                <span class="badge badge-assertive" ng-hide="messageCount == 0">{{messageCount}}</span>
+            </a>
+
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-calendar"></i>
+                Upcoming Appointments
+                <span class="badge badge-positive">[soon]</span>
+            </a>
+
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-person-stalker"></i>
+                My Doctors
+                <span class="badge badge-positive">[soon]</span>
+            </a>
+            <a class="item item-icon-left" ng-click="logout()">
+                <i class="icon ion-key"></i>
+                Log Out
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+<ion-view title="Requests">
+    <ion-nav-buttons side="primary">
+        <a class="button button-clear button-assertive" ui-sref="consumerDashboard">
+            Back
+        </a>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        <ion-list>
+            <ion-item
+                    class="item-thumbnail-left item-button-right"
+                    ng-repeat="request in requests track by $index">
+                <img src="img/avatar-1-128.jpg">
+                <h2>Dr. {{request.doctor.names}}</h2>
+                <p>{{request.type | types}}</p>
+                <p>Created {{getTimeLapse(request.date)}}</p>
+                <p>Complaints : {{request.symptoms}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

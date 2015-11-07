@@ -1,0 +1,26 @@
+<ion-view title="Find Doctor">
+    <ion-content padding="true" class="has-header">
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" ng-model="search.$" placeholder="Search by name, speciality or location">
+            </label>
+            <a class="button button-clear" ui-sref="consumerDashboard">
+                Cancel
+            </a>
+        </div>
+        <div>
+            <p><h3>Search Results</h3></p>
+        </div>
+        <ion-list>
+            <a
+                    class="item item-thumbnail-left item-button-right"
+                    ng-repeat="doc in doctors | filter:search"
+                    ui-sref="services({ doctor : doc })">
+                <img src="img/avatar-1-128.jpg">
+                <h2>Dr. {{doc.info.names}}</h2>
+                <p>{{doc.info.speciality}}</p>
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>

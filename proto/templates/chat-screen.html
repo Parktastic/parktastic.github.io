@@ -1,0 +1,23 @@
+<ion-view title="Chats ({{names}})">
+    <ion-nav-buttons side="primary">
+        <a class="button button-clear button-assertive" ui-sref="messages">
+            Back
+        </a>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+       <div class="spacer" style="width: 300px; height: 20px;"></div>
+        <ion-list ng-repeat="message in messages">
+            <div class="item item-avatar">
+                <img ng-src="{{message.img}}">
+                <p class="chat-message">{{message.message}}</p>
+                <p><b>{{getTimeLapse(message.date)}}</b></p>
+            </div>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar>
+        <div class="button-bar">
+            <button class="button button-positive" ng-click="reply()">Reply</button>
+            <button class="button button-balanced" ng-click="call()">Call</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

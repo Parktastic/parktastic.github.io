@@ -1,0 +1,53 @@
+<ion-view title="Call" ng-init="callDetails = { callLater : false, customised : false }">
+    <ion-nav-buttons side="primary">
+        <a class="button button-clear button-assertive" ui-sref="requests">
+            Back
+        </a>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        <form class="list" ng-init="callLater = false">
+            <span class="item item-toggle">
+                Currently unavailable
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" ng-model="callDetails.callLater">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </span>
+            <div class="spacer" style="width: 300px; height: 20px;"></div>
+            <div ng-show="callDetails.callLater">
+                <span class="item item-toggle">
+                    Customised Reply
+                    <label class="toggle toggle-assertive">
+                        <input type="checkbox" ng-model="callDetails.customised">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </span>
+                <div ng-show="callDetails.customised">
+                    <textarea name="comment"
+                              ng-model="callDetails.message">
+                    </textarea>
+                </div>
+                <div ng-hide="callDetails.customised">
+                    <div class="item item-divider">
+                        Will call back in
+                    </div>
+                    <ion-list>
+                        <ion-radio
+                                name="doc"
+                                ng-repeat="interval in callbackIntervals"
+                                ng-model="callDetails.callbackTime"
+                                ng-value="interval.date">
+                            {{interval.display}}
+                        </ion-radio>
+                    </ion-list>
+                </div>
+            </div>
+        </form>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <button class="button button-positive button-block" ng-click="call(callDetails)">{{callDetails.callLater ? 'Respond' : 'Call Now' }}</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,70 @@
+<ion-view title="Signup" ng-init="registration = { userType : 'doctor' }">
+    <ion-content padding="true" scroll="true" class="has-header">
+        <form class="list">
+            <ion-list>
+                <div class="item item-divider">
+                    I am a
+                </div>
+                <ion-radio name="doc" ng-model="registration.userType" ng-value="'doctor'">Doctor</ion-radio>
+                <ion-radio name="doc" ng-model="registration.userType" ng-value="'consumer'">Consumer</ion-radio>
+                <div class="spacer" style="width: 300px; height: 20px;"></div>
+                <div class="item item-divider">
+                    Basic Details
+                </div>
+                <label class="item item-input">
+                    <span class="input-label">Names</span>
+                    <input type="text" ng-model="registration.names" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="text" ng-model="registration.email" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Phone</span>
+                    <input type="text" ng-model="registration.phone" placeholder="+254 XXX XXX XXX">
+                </label>
+                <div ng-show="registration.userType == 'doctor'">
+                    <label class="item item-input">
+                        <span class="input-label">Registration Number</span>
+                        <input type="text" ng-model="registration.regnum" placeholder="Medical board registration / License number">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Title</span>
+                        <input type="text" ng-model="registration.title" placeholder="E.g Dr / Prof ">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Speciality</span>
+                        <input type="text" ng-model="registration.speciality" placeholder="E.g Cardiologist">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Education</span>
+                        <input type="text" ng-model="registration.education" placeholder="E.g MMed, Uon">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Consultation Fee (Kshs.)</span>
+                        <input type="text" ng-model="registration.fee" placeholder="">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Location</span>
+                        <input type="text" ng-model="registration.location" placeholder="E.g Doctor's Plaza, 4th Floor, Nairobi">
+                    </label>
+                </div>
+                <div class="spacer" style="width: 300px; height: 20px;"></div>
+                <div class="item item-divider">
+                    Login Details
+                </div>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" ng-model="registration.password">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label" ng-model="confirmedPassword">Confirm Password</span>
+                    <input type="password" placeholder="">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 83px;"></div>
+        </form>
+        <button class="button button-balanced button-block" ng-click="signUp(registration)">Sign up</button>
+        <a class="button button-assertive button-block button-clear" ui-sref="login">Cancel</a>
+    </ion-content>
+</ion-view>
