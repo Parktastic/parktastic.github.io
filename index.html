@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" sizes="16x16 32x32 64x64">
-    <title>ConnectHealth</title>
-
-    <!-- This is our Google Quicksand font and Font-Awesome -->
-    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Connect Health is a platform">
+      <meta name="author" content="">
+      <link rel="shortcut icon" type="image/x-icon" href="images/cnh-favicon.svg" sizes="32x32">
+      <title>ConnectHealth</title>
+      <!-- This is our Google titillium font and Font-Awesome -->
+      <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/custom.css" rel="stylesheet">
+      <!-- connect health styles -->
+      <link href="css/connect-health.css" rel="stylesheet">
   </head>
-
-  <body>
-
   <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -45,25 +28,31 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#jumbotron"><img src="images/new-logo.svg" alt="ConnectHealth" title="ConnectHealth"></a>
+          <a class="navbar-brand" href="#home">
+              <img src="images/cnh-website-logo.png" alt="ConnectHealth" title="ConnectHealth" class="cnh-logo">
+          </a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right navbar-custom-font">
-            <li><a href="#trust">TRUST</a></li>
-            <li><a href="#convenience">CONVENIENCE</a></li>
+              <li><a href="#home">HOME</a></li>
+            <li><a href="#benefits">BENEFITS</a></li>
+            <li><a href="#features">FEATURES</a></li>
             <li><a href="#sign-up">SIGN UP</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div id="jumbotron" class="jumbotron">
+    <div id="home" class="jumbotron">
       <div class="container">
         <h1>Healthcare you can trust in Kenya</h1>
-        <p>Connect with a physician you can trust for you and your family<br>anytime, anywhere from the palm of your hand.</p>
-        <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup" class="row">
+        <p>Connect with a physician you can trust for you and your family anytime, anywhere <br/>from the palm of your hand.</p>
+        <div class="row cta-btns">
+            <a class="doc-signup" href="./proto/#/signup?u=d">Sign up as a doctor</a>
+            <a class="pat-signup" href="./proto/#/signup?u=c">Sign up as a patient</a>
+        </div>
+          <!-- Begin MailChimp Signup Form -->
+        <!--<div id="mc_embed_signup" class="row">
           <div class="col-sm-7 col-centered col-xs-12">
             <form action="//connecthealth.us10.list-manage.com/subscribe/post?u=2b2843e4f8770b0b53b274853&amp;id=9a3d7093ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" role="form" novalidate>
             <div class="mc-field-group form-group">
@@ -76,7 +65,7 @@
             <div id="mce-responses" class="clear">
               <div class="response" id="mce-error-response" style="display:none"></div>
               <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            </div>
             <div style="position: absolute; left: -5000px;">
               <input type="text" name="b_2b2843e4f8770b0b53b274853_9a3d7093ed" tabindex="-1" value="">
             </div>
@@ -86,204 +75,127 @@
           </div>
 
           </form>
-        </div>
-          <!--End mc_embed_signup-->
+        </div>-->
       </div>
     </div>
-
-    <div id="trust">
+    <!-- list of benefits -->
+    <div id="benefits" class="benefits-container">
       <div class="container homepage no-pad-bottom">
-        <h2>Find a doctor that's right for you</h2>
+        <h2>Why use connecthealth</h2>
         <hr>
         <div class="row">
-			<div class="col-md-12" align="center">
-				<img src="images/Picture1.png" class="img-responsive">
-			</div>
-		</div>       
-        <br>
-        <div class="row">
-        	<div class="col-md-12">
-        		<p>
-          			Choosing the right doctor is one of the most important health decisions you'll ever make.
-                <br><br>But it's hard to do, especially if you're new to the area.
-          			<br><br>ConnectHealth helps you find a doctor the right way: through the people you trust.
-          			<br><br>We curate a personalized list of health practitioners based the relationships within your network, and make it possible to connect with them immediately.
-          			<br><br>Need an in-person follow-up, drugs, or labs? We can deliver all three directly to you. Our supply chain is verified with counterfeit detection technology, so you know what you're getting.
-          			<br><br>
-        		</p>
-        	</div>
+        	<div class="col-md-4 benefit">
+                <i class="fa fa-medkit"></i>
+                <h3>Find a doctor</h3>
+                <p>
+                    We curate a personalized list of health practitioners based
+                    the relationships within your network, and make it possible
+                    to connect with them immediately.
+                </p>
+            </div>
+            <div class="col-md-4 benefit">
+                <i class="fa fa-calendar"></i>
+                <h3>Manage schedules</h3>
+                <p>
+                    We curate a personalized list of health practitioners based
+                    the relationships within your network, and make it possible
+                    to connect with them immediately.
+                </p>
+            </div>
+            <div class="col-md-4 benefit">
+                <i class="fa fa-money"></i>
+                <h3>online payments</h3>
+                <p>
+                    We curate a personalized list of health practitioners based
+                    the relationships within your network, and make it possible
+                    to connect with them immediately.
+                </p>
+            </div>
         </div>
        </div>
-       <div>
-	       <div class="container homepage">
-	        <!-- Begin 3 point how it works summary -->
-	        <h3>How It Works</h3>
-	        <div class="row">
-	          <div class="col-md-4">
-	            <span class="fa-stack fa-4x">
-	            	<i class="hovicon effect-1 sub-a">
-	              		<b class="fa fa-circle fa-stack-2x"></b>
-	              		<b class="fa fa-search fa-stack-1x fa-inverse"></b>
-	              	</i>
-	            </span>
-	            <h3>Search</h3>
-	            <p>Enter physician criteria based on specialty and location.</p>
-	          </div>
-	          <div class="col-md-4">
-	            <span class="fa-stack fa-4x">
-	            	<i class="hovicon effect-1 sub-a">
-	              		<b class="fa fa-circle fa-stack-2x"></b>
-	              		<b class="fa fa-group fa-stack-1x fa-inverse"></b>
-	              	</i>
-	            </span>
-	            <h3>View Relationships</h3>
-	            <p>Get recommendations based on the strength of relationships within your network:<br>
-	            </p>
-	          </div>
-	          <div class="col-md-4">
-	            <span class="fa-stack fa-4x">
-	            	<i class="hovicon effect-1 sub-a">
-	              		<b class="fa fa-circle fa-stack-2x"></b>
-	              		<b class="fa fa-user-md fa-stack-1x fa-inverse"></b>
-	              	</i>
-	            </span>
-	            <h3>Connect</h3>
-	            <p>Send a message to the doctor you want to connect with and add them to your network.</p>
-	          </div>
-	        </div>
-	        <div class="row">
-	        	<div class="col-md-12">
-	        		<p><a class="btn btn-success btn-lg btn-bg-custom-color" href="//connecthealth.us10.list-manage.com/subscribe/post?u=2b2843e4f8770b0b53b274853&amp;id=fa9a87e39d" target="_blank" role="button">SIGN UP</a></p>
-	        	</div>
-	        </div>
-	        <!-- End 3 point how it works summary -->
-	      </div>
-      </div>
     </div>
-
-    <div id="convenience" class="bg-gray">
+    <!-- feature list -->
+    <div id="features" class="features-container">
       <div class="container homepage no-pad-bottom">
-        <h2>Consult with your doctor from anywhere</h2>
+        <h2>What connecthealth can do</h2>
         <hr>
         <div class="row">
-			<div class="col-md-12" align="center">
-				<img src="images/Picture2.png" class="img-responsive">
-			</div>
-		</div>       
-        <br>
-        <div class="row">
-        	<div class="col-md-12">
+        	<div class="col-md-6 feature">
+                <i class="fa fa-user-md"></i>
+                <h3>Find a doctor of your choice</h3>
         		<p>
         	  		As a 21st century consumer, you’re always looking for convenient solutions to accommodate a busy schedule.
-        	  		<br>Why should healthcare solutions be any different?
-    	      		<br><br>
-	          		ConnectHealth lets you fully engage with your care team securely and conveniently, over your mobile device.
-					<br>You can now get care from your doctor from the convenience of your home or on the go.
+        	  		ConnectHealth lets you fully engage with your care team securely and conveniently, over your mobile device.
+					You can now get care from your doctor from the convenience of your home or on the go.
         		</p>
         	</div>
+            <div class="col-md-6 feature">
+                <i class="fa fa-user-md"></i>
+                <h3>Find a doctor of your choice</h3>
+                <p>
+                    As a 21st century consumer, you’re always looking for convenient solutions to accommodate a busy schedule.
+                    ConnectHealth lets you fully engage with your care team securely and conveniently, over your mobile device.
+                    You can now get care from your doctor from the convenience of your home or on the go.
+                </p>
+            </div>
+            <div class="col-md-6 feature">
+                <i class="fa fa-user-md"></i>
+                <h3>Find a doctor of your choice</h3>
+                <p>
+                    As a 21st century consumer, you’re always looking for convenient solutions to accommodate a busy schedule.
+                    ConnectHealth lets you fully engage with your care team securely and conveniently, over your mobile device.
+                    You can now get care from your doctor from the convenience of your home or on the go.
+                </p>
+            </div>
+            <div class="col-md-6 feature">
+                <i class="fa fa-user-md"></i>
+                <h3>Find a doctor of your choice</h3>
+                <p>
+                    As a 21st century consumer, you’re always looking for convenient solutions to accommodate a busy schedule.
+                    ConnectHealth lets you fully engage with your care team securely and conveniently, over your mobile device.
+                    You can now get care from your doctor from the convenience of your home or on the go.
+                </p>
+            </div>
+            <div class="col-md-6 feature">
+                <i class="fa fa-user-md"></i>
+                <h3>Find a doctor of your choice</h3>
+                <p>
+                    As a 21st century consumer, you’re always looking for convenient solutions to accommodate a busy schedule.
+                    ConnectHealth lets you fully engage with your care team securely and conveniently, over your mobile device.
+                    You can now get care from your doctor from the convenience of your home or on the go.
+                </p>
+            </div>
+            <div class="col-md-6 feature">
+                <i class="fa fa-user-md"></i>
+                <h3>Find a doctor of your choice</h3>
+                <p>
+                    As a 21st century consumer, you’re always looking for convenient solutions to accommodate a busy schedule.
+                    ConnectHealth lets you fully engage with your care team securely and conveniently, over your mobile device.
+                    You can now get care from your doctor from the convenience of your home or on the go.
+                </p>
+            </div>
         </div>
        </div>
-       <div class="bg-gray">
-	       <div class="container homepage">
-	      <!-- Begin 3 point how it works summary -->
-	        <h3>How It Works</h3>
-	        <div class="row">
-	          <div class="col-md-4">
-	            <span class="fa-stack fa-4x">
-	            	<i class="hovicon effect-1 sub-a">
-	              		<b class="fa fa-circle fa-stack-2x"></b>
-	              		<b class="fa fa-calendar fa-stack-1x fa-inverse"></b>
-	              	</i>
-	            </span>
-	            <h3>Schedule</h3>
-	            <p>Once you’ve chosen your doctor, schedule your consultation.</p>
-	          </div>
-	          <div class="col-md-4">
-	            <span class="fa-stack fa-4x">
-	            	<i class="hovicon effect-1 sub-a">
-	              		<b class="fa fa-circle fa-stack-2x"></b>
-	              		<b class="fa fa-user-md fa-stack-1x fa-inverse"></b>
-	              	</i>
-	            </span>
-	            <h3>Connect and Pay</h3>
-	            <p>At the time of your appointment, the doctor will call you to begin your consultation. You can pay with credit card or M-PESA
-	            </p>
-	          </div>
-	          <div class="col-md-4">
-	            <span class="fa-stack fa-4x">
-	            	<i class="hovicon effect-1 sub-a">
-	              		<b class="fa fa-circle fa-stack-2x"></b>
-	              		<b class="fa fa-ambulance fa-stack-1x fa-inverse"></b>
-	              	</i>
-	            </span>
-	            <h3>Deliver</h3>
-	            <p>After your consult, your doc can send labs, drugs, and follow-ups to your doorstep to make sure you get the care you need.</p>
-	          </div>
-	        </div>
-	        <div class="row">
-	        	<div class="col-md-12">
-	        		<p><a class="btn btn-success btn-lg btn-bg-custom-color" href="//connecthealth.us10.list-manage.com/subscribe/post?u=2b2843e4f8770b0b53b274853&amp;id=aaac0b8164" target="_blank" role="button">SIGN UP</a></p>
-	        	</div>
-	        </div>
-	      <!-- End 3 point how it works summary -->
-	      </div>
-      </div>
     </div>
 
-
-    <div id="sign-up" class="bg-gray">
+    <div id="sign-up" class="sign-up">
       <div class="container homepage">
-        <h2>Join Our Beta Launch!</h2>
+        <h2>Join our platform</h2>
         <hr>
         <div class="row">
-        	<div class="col-md-12">
-        	<p>
-          		Let's create better health access together. <br> <br> If you're someone who cares about using technology to improve health access for the rest of the world, we'd love to build this service with you. Please sign up to be a part of our beta launch, and help shape healthcare in Kenya.
-        	</p>
-        	</div>
+            <a class="doc-signup" href="./proto/#/signup?u=d">Sign up as a Doctor</a>
+            <a class="pat-signup" href="./proto/#/signup?u=c">Sign up as a Patient</a>
         </div>
-        <br>
-        <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup" class="row">
-          <div class="col-sm-7 col-centered">
-            <form action="//connecthealth.us10.list-manage.com/subscribe/post?u=2b2843e4f8770b0b53b274853&amp;id=9a3d7093ed" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" role="form" novalidate>
-            <div class="mc-field-group form-group">
-              <input type="email" value="" name="EMAIL" class="required email form-control txtplaceholder" id="mce-EMAIL" placeholder="Be invited to our beta launch!  Enter your email address here.">
-              <p>We'll never share your information, and always be mindful your inbox.</p>
-            </div>
-          </div>
-
-          <div class="col-sm-3 col-centered">
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;">
-              <input type="text" name="b_2b2843e4f8770b0b53b274853_9a3d7093ed" tabindex="-1" value="">
-            </div>
-            <div class="clear">
-              <input type="submit" value="SUBMIT" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-lg btn-bg-custom-color">
-            </div>
-          </div>
-          </form>
-        </div>
-          <!--End mc_embed_signup-->
-      
       </div>
     </div>
-
-  
     <footer>
       <div class="container">
           <p>Copyright 2015 ConnectHealth, Inc.  All rights reserved.</p>
       </div>
     </footer>
-    
     <div id="back-to-top">
-      <a href="#jumbotron"> <i class="fa fa-3x fa-chevron-circle-up"></i></a>
+      <a href="#home"> <i class="fa fa-3x fa-chevron-circle-up"></i></a>
     </div>
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -292,5 +204,14 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/smoothscroll.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </body>
 </html>
