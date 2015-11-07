@@ -83,15 +83,21 @@ define([
                                 //lookup user. if not found, then means they have to sign up first
                                 if(userRecord.info != undefined)
                                 {
+                                    $rootScope.user = userRecord.info;
+
                                     var alertPopup = $ionicPopup.alert({
                                         title: 'Login',
                                         template: 'Login successful! Welcome ' + userRecord.info.names
                                     });
 
-                                    if(userRecord.info.name == "doctor")
-                                        $state.go("providerDashboard");
-                                    else
-                                        $state.go("consumerDashboard");
+                                    alertPopup.then(function(res) {
+                                        if(userRecord.info.name == "doctor")
+                                            $state.go("providerDashboard");
+                                        else
+                                            $state.go("consumerDashboard");
+                                    });
+
+
                                 }else{
                                     var alertPopup = $ionicPopup.alert({
                                         title: 'Login',
