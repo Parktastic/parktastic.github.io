@@ -198,8 +198,9 @@ footer{
     .navbar-toggle:hover .icon-bar{
         background-color: #ffffff !important;
     }
-    .cta-btns button,
-    .sign-up button{
-        margin-bottom: 16px;
+    .cta-btns a,
+    .sign-up a{
+        display: block;
+        margin: 0 10px 16px 10px;
     }
 }
