@@ -11,7 +11,7 @@
                 <div class="item item-divider">
                     Basic Details
                 </div>
-                <button class="button button-positive button-block" ng-click="facebookLogin()">Connect with Facebook</button>
+                <button class="button button-positive button-block" ng-show="!facebookMode" ng-click="facebookLogin()">Connect with Facebook</button>
                 <label class="item item-input">
                     <span class="input-label">Names</span>
                     <input type="text" ng-model="registration.names" placeholder="">
@@ -51,17 +51,19 @@
                     </label>
                 </div>
                 <div class="spacer" style="width: 300px; height: 20px;"></div>
-                <div class="item item-divider">
-                    Login Details
+                <div ng-show="!facebookMode">
+                    <div class="item item-divider">
+                        Login Details
+                    </div>
+                    <label class="item item-input">
+                        <span class="input-label">Password</span>
+                        <input type="password" placeholder="" ng-model="registration.password">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label" ng-model="confirmedPassword">Confirm Password</span>
+                        <input type="password" placeholder="">
+                    </label>
                 </div>
-                <label class="item item-input">
-                    <span class="input-label">Password</span>
-                    <input type="password" placeholder="" ng-model="registration.password">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label" ng-model="confirmedPassword">Confirm Password</span>
-                    <input type="password" placeholder="">
-                </label>
             </ion-list>
             <div class="spacer" style="width: 300px; height: 83px;"></div>
         </form>
