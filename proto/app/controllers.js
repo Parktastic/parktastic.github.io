@@ -7,8 +7,8 @@ define([
 
     //the login controller
     app.controller('LoginCtrl', [
-        "$ionicPopup", "$scope", "$state", "Auth", "$rootScope", "$ionicLoading",
-        function($ionicPopup, $scope, $state, Auth, $rootScope, $ionicLoading){
+        "$ionicPopup", "$scope", "$state", "Auth", "$rootScope", "$ionicLoading", "Facebook",
+        function($ionicPopup, $scope, $state, Auth, $rootScope, $ionicLoading, Facebook){
 
             $rootScope.title = "Login";
 
@@ -65,7 +65,10 @@ define([
 
             //login with facebook
             $scope.facebookLogin = function(){
-                window.location.href = "https://api.imgur.com/oauth2/authorize?client_id=" + "CLIENT_ID_HERE" + "&response_type=token";
+                // From now on you can use the Facebook service just as Facebook api says
+                Facebook.login(function(response) {
+                    console.log(response);
+                });
             };
         }
     ]);
@@ -778,13 +781,16 @@ define([
                     });
                 },
                 call     : function(){
+                    $scope.phone = $stateParams["number"];
                     var popup = $ionicPopup.alert({
                         title: 'Call',
                         scope: $scope,
                         template: '<twilio-dialer phone="' + $stateParams["number"] + '"></twilio-dialer>'
                     });
 
-                    $scope.closePopup = popup.close;
+                    $scope.closePopup = function(){
+                        popup.close();
+                    };
                 }
             });
 

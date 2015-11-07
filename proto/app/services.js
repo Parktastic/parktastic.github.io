@@ -189,11 +189,52 @@ define([
     app.factory('TwilioService', [
         "$http",
         function($http){
-            return $http({
-                method: 'GET',
-                url: 'http://demo.talicraft.com/connect_health/connect_voice_call.php'
-            });
+
+            var log = null;
+
+            //initialise the twilio service here
+            function init(token){
+                Twilio.Device.setup(token);
+
+                Twilio.Device.ready(function (device) {
+                    log = "Ready";
+                    console.log("ready");
+                });
+
+                Twilio.Device.error(function (error) {
+                    log = "Error: " + error.message;
+                });
+
+                Twilio.Device.connect(function (conn) {
+                    log = "Successfully established call";
+                });
+
+                Twilio.Device.disconnect(function (conn) {
+                    log = "Call ended";
+                });
+            }
+
+            return {
+                log : log,
+                start : function(){
+
+                    //initialise connection to call server
+                    $http({
+                        method: 'GET',
+                        url: 'http://demo.talicraft.com/connect_health/connect_voice_call.php'
+                    }).then(function successCallback(response){
+                        console.log(response);
+                        init(response.data);
+                    }, function errorCallback(error){});
+
+                },
+                call : function(number) {
+                    Twilio.Device.connect( { "PhoneNumber": number } );
+                },
+                hangup : function hangup() {
+                    Twilio.Device.disconnectAll();
+                }
+            }
         }
     ]);
-
 });

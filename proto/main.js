@@ -9,6 +9,7 @@ require.config({
     paths: {
         'ionic'     : '../lib/ionic/js/ionic.bundle.min',
         'firebase'  : '../lib/firebase',
+        'af'  : '../lib/angular-facebook',
         'angularFire' : '../lib/angularfire.min',
         'moment' : '../lib/moment.min',
         'resource' : '../lib/angular-resource.min',
@@ -17,6 +18,7 @@ require.config({
     shim: {
         'firebase': ['ionic'],
         'angularFire' : [ 'ionic' ],
-        'resource' : [ 'ionic' ]
+        'resource' : [ 'ionic' ],
+        'af' : [ 'ionic' ]
     }
 });
