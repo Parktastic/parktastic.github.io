@@ -89,7 +89,7 @@ define([
                                     });
 
                                     alertPopup.then(function(res) {
-
+                                        console.log(res);
                                         if(userRecord.info.name == "doctor")
                                             $state.go("providerDashboard");
                                         else
