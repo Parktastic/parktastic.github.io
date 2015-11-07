@@ -5,8 +5,8 @@ define([
 
   // the run blocks
   app.run([
-    '$ionicPlatform', '$rootScope', '$location',
-    function ($ionicPlatform, $rootScope, $location) {
+    '$ionicPlatform', '$rootScope', '$location', '$state', 'TwilioService',
+    function ($ionicPlatform, $rootScope, $location, $state, TwilioService) {
 
         $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -27,7 +27,16 @@ define([
             {
                 event.preventDefault();
             }
+
+            if($rootScope.user == null && toState.name != "login" && toState.name != "signup")
+            {
+                event.preventDefault();
+                $state.go("login");
+            }
         });
+
+        //initialise Twilio Service
+        TwilioService.start();
     }
   ]);
 });

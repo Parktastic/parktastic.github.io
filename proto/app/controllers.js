@@ -7,8 +7,8 @@ define([
 
     //the login controller
     app.controller('LoginCtrl', [
-        "$ionicPopup", "$scope", "$state", "Auth", "$rootScope", "$ionicLoading",
-        function($ionicPopup, $scope, $state, Auth, $rootScope, $ionicLoading){
+        "$ionicPopup", "$scope", "$state", "Auth", "$rootScope", "$ionicLoading", "Facebook", "FacebookConnect", "UserId", "DataRecord",
+        function($ionicPopup, $scope, $state, Auth, $rootScope, $ionicLoading, Facebook, FacebookConnect, UserId, DataRecord){
 
             $rootScope.title = "Login";
 
@@ -65,15 +65,57 @@ define([
 
             //login with facebook
             $scope.facebookLogin = function(){
-                window.location.href = "https://api.imgur.com/oauth2/authorize?client_id=" + "CLIENT_ID_HERE" + "&response_type=token";
+
+                // From now on you can use the Facebook service just as Facebook api says
+                Facebook.login(function(response) {
+                    FacebookConnect(response.authResponse.userID, response.authResponse.accessToken)
+                        .then(function(response){
+
+                            var userRecord = DataRecord("users", UserId(response.data.email));
+
+                            setTimeout(function(){
+                                //lookup user. if not found, then means they have to sign up first
+                                if(userRecord.info != undefined)
+                                {
+                                    var alertPopup = $ionicPopup.alert({
+                                        title: 'Login',
+                                        template: 'Login successful! Welcome ' + userRecord.info.names
+                                    });
+
+                                    alertPopup.then(function(res) {
+
+                                        if(userRecord.info.name == "doctor")
+                                            $state.go("providerDashboard");
+                                        else
+                                            $state.go("consumerDashboard");
+                                    });
+                                }else{
+                                    var alertPopup = $ionicPopup.alert({
+                                        title: 'Login',
+                                        template: 'Your facebook account is not connected to Connect Health. Create an account and connect with facebook to allow Facebook Sign In.'
+                                    });
+                                    alertPopup.then(function(res) {
+
+                                    });
+                                }
+                            }, 1000);
+
+                        },function(error){
+
+                        });
+                });
             };
         }
     ]);
 
     //the signup controller
     app.controller('signupCtrl', [
-        "$ionicPopup", "$scope", "Auth", "$state", "$ionicLoading",
-        function($ionicPopup, $scope, Auth, $state, $ionicLoading) {
+        "$ionicPopup", "$scope", "Auth", "$state", "$ionicLoading", "Facebook", "FacebookConnect", "$stateParams",
+        function($ionicPopup, $scope, Auth, $state, $ionicLoading, Facebook, FacebookConnect, $stateParams) {
+
+            $scope.registration = {
+                userType : $stateParams["u"]
+            };
 
             // An alert dialog
             $scope.signUp = function(registration) {
@@ -108,6 +150,23 @@ define([
 
                         });
                     }
+                });
+            };
+
+            //login with facebook
+            $scope.facebookLogin = function(){
+                // From now on you can use the Facebook service just as Facebook api says
+                Facebook.login(function(response) {
+                    FacebookConnect(response.authResponse.userID, response.authResponse.accessToken)
+                        .then(function(response){
+
+                            //update UI
+                            $scope.registration.names = response.data.name;
+                            $scope.registration.email = response.data.email;
+
+                        },function(error){
+
+                        });
                 });
             };
         }
@@ -778,13 +837,16 @@ define([
                     });
                 },
                 call     : function(){
+                    $scope.phone = $stateParams["number"];
                     var popup = $ionicPopup.alert({
                         title: 'Call',
                         scope: $scope,
                         template: '<twilio-dialer phone="' + $stateParams["number"] + '"></twilio-dialer>'
                     });
 
-                    $scope.closePopup = popup.close;
+                    $scope.closePopup = function(){
+                        popup.close();
+                    };
                 }
             });
 

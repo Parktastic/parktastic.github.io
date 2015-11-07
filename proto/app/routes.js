@@ -4,11 +4,15 @@ define([
 ], function (app) {
     'use strict';
 
-    app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, FacebookProvider) {
 
         if (ionic.Platform.isAndroid())
             $ionicConfigProvider.scrolling.jsScrolling(false);
 
+        //configure facebook app
+        FacebookProvider.init('1675299889374042');
+
+        //configure the system states
         $stateProvider
 
             .state('login', {
@@ -20,11 +24,14 @@ define([
                 }
             })
             .state('signup', {
-                url: '/signup',
+                url: '/signup?:u',
                 templateUrl: 'templates/signup.html',
                 controller: 'signupCtrl',
                 data : {
                     requiresLogin : false
+                },
+                params : {
+                    u : "d"
                 }
             })
 
