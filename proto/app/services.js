@@ -145,10 +145,10 @@ define([
 
     //factory to save service request
     app.factory('DataRecord', [
-        'configs',
-        function(configs){
+        'configs', '$firebaseObject',
+        function(configs, $firebaseObject){
             return function(collection, recordId) {
-                return new Firebase(configs.firebaseUrl).child(collection).child(recordId);
+                return $firebaseObject(new Firebase(configs.firebaseUrl).child(collection).child(recordId));
             }
         }
     ]);
@@ -181,6 +181,19 @@ define([
                 input = input || '';
 
                 return (input == "call" ? "Phone Consultation" : "In-Person Appointment");
+            };
+        }
+    ]);
+
+    //filter for showing request type
+    app.factory('FacebookConnect', [
+        "$http",
+        function($http) {
+            return function(userId, accessToken) {
+                return $http({
+                    method: 'GET',
+                    url: 'https://graph.facebook.com/' + userId + '?fields=id,name,picture,email&access_token=' + accessToken
+                });
             };
         }
     ]);

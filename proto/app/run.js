@@ -28,7 +28,7 @@ define([
                 event.preventDefault();
             }
 
-            if($rootScope.user == null && toState.name != "login")
+            if($rootScope.user == null && toState.name != "login" && toState.name != "signup")
             {
                 event.preventDefault();
                 $state.go("login");

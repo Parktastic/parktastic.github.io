@@ -24,11 +24,14 @@ define([
                 }
             })
             .state('signup', {
-                url: '/signup',
+                url: '/signup?:u',
                 templateUrl: 'templates/signup.html',
                 controller: 'signupCtrl',
                 data : {
                     requiresLogin : false
+                },
+                params : {
+                    u : "d"
                 }
             })
 
