@@ -66,10 +66,16 @@ define([
             //login with facebook
             $scope.facebookLogin = function(){
 
+                $ionicLoading.show({
+                    template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Connecting to Facebook...</p>'
+                });
+
                 // From now on you can use the Facebook service just as Facebook api says
                 Facebook.login(function(response) {
                     FacebookConnect(response.authResponse.userID, response.authResponse.accessToken)
                         .then(function(response){
+                            //stop the toast
+                            $ionicLoading.hide();
 
                             var userRecord = DataRecord("users", UserId(response.data.email));
 
@@ -112,6 +118,7 @@ define([
     app.controller('signupCtrl', [
         "$ionicPopup", "$scope", "Auth", "$state", "$ionicLoading", "Facebook", "FacebookConnect", "$stateParams",
         function($ionicPopup, $scope, Auth, $state, $ionicLoading, Facebook, FacebookConnect, $stateParams) {
+            $scope.facebookMode = false;
 
             $scope.registration = {
                 userType : $stateParams["u"]
@@ -155,14 +162,27 @@ define([
 
             //login with facebook
             $scope.facebookLogin = function(){
+
+                $ionicLoading.show({
+                    template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Connecting to Facebook..</p>'
+                });
+
                 // From now on you can use the Facebook service just as Facebook api says
                 Facebook.login(function(response) {
+
+                    //hide loading
+                    $ionicLoading.hide();
+
                     FacebookConnect(response.authResponse.userID, response.authResponse.accessToken)
                         .then(function(response){
+
+                            console.log(response);
 
                             //update UI
                             $scope.registration.names = response.data.name;
                             $scope.registration.email = response.data.email;
+                            $scope.registration.password = response.data.id;
+                            $scope.facebookMode = true;
 
                         },function(error){
 
