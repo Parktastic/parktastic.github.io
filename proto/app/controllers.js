@@ -88,13 +88,10 @@ define([
                                         template: 'Login successful! Welcome ' + userRecord.info.names
                                     });
 
-                                    alertPopup.then(function(res) {
-                                        console.log(res);
-                                        if(userRecord.info.name == "doctor")
-                                            $state.go("providerDashboard");
-                                        else
-                                            $state.go("consumerDashboard");
-                                    });
+                                    if(userRecord.info.name == "doctor")
+                                        $state.go("providerDashboard");
+                                    else
+                                        $state.go("consumerDashboard");
                                 }else{
                                     var alertPopup = $ionicPopup.alert({
                                         title: 'Login',
