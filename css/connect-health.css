@@ -35,7 +35,8 @@ body{
 .jumbotron{
     height: 80vh;
     height: calc(100vh - 120px) !important;
-    background: url("../images/hero-image.jpg") no-repeat center center fixed;
+    background: url("../images/cnh-visual.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 .jumbotron h1{
     margin: 0;
