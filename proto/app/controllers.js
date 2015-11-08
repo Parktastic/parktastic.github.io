@@ -64,56 +64,56 @@ define([
             };
 
             //login with facebook
-            $scope.facebookLogin = function(){
-
-                $ionicLoading.show({
-                    template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Connecting to Facebook...</p>'
-                });
-
-                // From now on you can use the Facebook service just as Facebook api says
-                Facebook.login(function(response) {
-                    FacebookConnect(response.authResponse.userID, response.authResponse.accessToken)
-                        .then(function(response){
-                            //stop the toast
-                            $ionicLoading.hide();
-
-                            var userRecord = DataRecord("users", UserId(response.data.email));
-
-                            setTimeout(function(){
-                                //lookup user. if not found, then means they have to sign up first
-                                if(userRecord.info != undefined)
-                                {
-                                    $rootScope.user = userRecord.info;
-
-                                    var alertPopup = $ionicPopup.alert({
-                                        title: 'Login',
-                                        template: 'Login successful! Welcome ' + userRecord.info.names
-                                    });
-
-                                    alertPopup.then(function(res) {
-                                        if(userRecord.info.name == "doctor")
-                                            $state.go("providerDashboard");
-                                        else
-                                            $state.go("consumerDashboard");
-                                    });
-
-
-                                }else{
-                                    var alertPopup = $ionicPopup.alert({
-                                        title: 'Login',
-                                        template: 'Your facebook account is not connected to Connect Health. Create an account and connect with facebook to allow Facebook Sign In.'
-                                    });
-                                    alertPopup.then(function(res) {
-
-                                    });
-                                }
-                            }, 1000);
-
-                        },function(error){
-
-                        });
-                });
-            };
+//            $scope.facebookLogin = function(){
+//
+//                $ionicLoading.show({
+//                    template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Connecting to Facebook...</p>'
+//                });
+//
+//                // From now on you can use the Facebook service just as Facebook api says
+//                Facebook.login(function(response) {
+//                    FacebookConnect(response.authResponse.userID, response.authResponse.accessToken)
+//                        .then(function(response){
+//                            //stop the toast
+//                            $ionicLoading.hide();
+//
+//                            var userRecord = DataRecord("users", UserId(response.data.email));
+//
+//                            setTimeout(function(){
+//                                //lookup user. if not found, then means they have to sign up first
+//                                if(userRecord.info != undefined)
+//                                {
+//                                    $rootScope.user = userRecord.info;
+//
+//                                    var alertPopup = $ionicPopup.alert({
+//                                        title: 'Login',
+//                                        template: 'Login successful! Welcome ' + userRecord.info.names
+//                                    });
+//
+//                                    alertPopup.then(function(res) {
+//                                        if(userRecord.info.name == "doctor")
+//                                            $state.go("providerDashboard");
+//                                        else
+//                                            $state.go("consumerDashboard");
+//                                    });
+//
+//
+//                                }else{
+//                                    var alertPopup = $ionicPopup.alert({
+//                                        title: 'Login',
+//                                        template: 'Your facebook account is not connected to Connect Health. Create an account and connect with facebook to allow Facebook Sign In.'
+//                                    });
+//                                    alertPopup.then(function(res) {
+//
+//                                    });
+//                                }
+//                            }, 1000);
+//
+//                        },function(error){
+//
+//                        });
+//                });
+//            };
         }
     ]);
 
@@ -163,35 +163,35 @@ define([
                 });
             };
 
-            //login with facebook
-            $scope.facebookLogin = function(){
-
-                $ionicLoading.show({
-                    template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Connecting to Facebook..</p>'
-                });
-
-                // From now on you can use the Facebook service just as Facebook api says
-                Facebook.login(function(response) {
-
-                    //hide loading
-                    $ionicLoading.hide();
-
-                    FacebookConnect(response.authResponse.userID, response.authResponse.accessToken)
-                        .then(function(response){
-
-                            console.log(response);
-
-                            //update UI
-                            $scope.registration.names = response.data.name;
-                            $scope.registration.email = response.data.email;
-                            $scope.registration.password = response.data.id;
-                            $scope.facebookMode = true;
-
-                        },function(error){
-
-                        });
-                });
-            };
+//            //login with facebook
+//            $scope.facebookLogin = function(){
+//
+//                $ionicLoading.show({
+//                    template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Connecting to Facebook..</p>'
+//                });
+//
+//                // From now on you can use the Facebook service just as Facebook api says
+//                Facebook.login(function(response) {
+//
+//                    //hide loading
+//                    $ionicLoading.hide();
+//
+//                    FacebookConnect(response.authResponse.userID, response.authResponse.accessToken)
+//                        .then(function(response){
+//
+//                            console.log(response);
+//
+//                            //update UI
+//                            $scope.registration.names = response.data.name;
+//                            $scope.registration.email = response.data.email;
+//                            $scope.registration.password = response.data.id;
+//                            $scope.facebookMode = true;
+//
+//                        },function(error){
+//
+//                        });
+//                });
+//            };
         }
     ]);
 
