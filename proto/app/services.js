@@ -153,6 +153,16 @@ define([
         }
     ]);
 
+    //factory to save service request
+    app.factory('EditableDataRecord', [
+        'configs',
+        function(configs, $firebaseObject){
+            return function(collection, recordId) {
+                return new Firebase(configs.firebaseUrl).child(collection).child(recordId);
+            }
+        }
+    ]);
+
     //factory to save appointment data
     app.factory('Appointments', [
         'configs',

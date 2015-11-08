@@ -787,7 +787,7 @@ define([
 
     //appointment response controller
     app.controller('ChatController', [
-        "$scope", "$ionicPopup", "$state", "Messages", "$stateParams", "$rootScope", "DataRecord",
+        "$scope", "$ionicPopup", "$state", "Messages", "$stateParams", "$rootScope", "EditableDataRecord",
         function($scope, $ionicPopup, $state, Messages, $stateParams, $rootScope, DataRecord){
 
             //load up messages
@@ -879,15 +879,17 @@ define([
                 },
                 call     : function(){
                     $scope.phone = $stateParams["number"];
-                    var popup = $ionicPopup.alert({
-                        title: 'Call',
-                        scope: $scope,
-                        template: '<twilio-dialer phone="' + $stateParams["number"] + '"></twilio-dialer>'
+
+                    var popup = $ionicPopup.show({
+                        template: '<twilio-dialer phone="' + $stateParams["number"] + '"></twilio-dialer>',
+                        title: '<h4>Call</h4>',
+                        scope: $scope
                     });
 
                     $scope.closePopup = function(){
                         popup.close();
                     };
+
                 }
             });
 

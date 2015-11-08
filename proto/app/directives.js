@@ -8,9 +8,11 @@ define([
         function(){
             return {
                 restrict    : "E",
-                scope       : true,
+                scope       : false,
                 templateUrl : "templates/call.html",
                 controller  : function($scope, $stateParams, TwilioService){
+
+                    console.log($scope);
 
                     //call the phone specified
                     TwilioService.call($scope.phone);
@@ -19,7 +21,7 @@ define([
                     angular.extend($scope, {
                         hangup : function(){
                             TwilioService.hangup();
-                            $scope.closePopup();
+                            $scope.$parent.closePopup();
                         }
                     });
 
