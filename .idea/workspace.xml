@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74a86340-e4e6-433b-a0f3-1a4666e2bd44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/templates/providerRequests.html" afterPath="$PROJECT_DIR$/proto/templates/providerRequests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/app/controllers.js" afterPath="$PROJECT_DIR$/proto/app/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="parktastic.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +35,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proto/app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="74" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.0" vertical-offset="1665" max-vertical-offset="13440">
-              <folding />
+            <state line="54" column="0" selection-start="1484" selection-end="1696" vertical-scroll-proportion="1.0296412" vertical-offset="150" max-vertical-offset="11580">
+              <folding>
+                <element signature="e#2825#2846#0" expanded="false" />
+                <element signature="e#5407#8441#0" expanded="false" />
+                <element signature="e#8548#8556#0" expanded="false" />
+                <element signature="e#8646#9239#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="providerRequests.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="providerRequests.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto/templates/providerRequests.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
@@ -145,10 +151,10 @@
         <option value="$PROJECT_DIR$/proto/templates/login.html" />
         <option value="$PROJECT_DIR$/proto/templates/signup.html" />
         <option value="$PROJECT_DIR$/proto/app/routes.js" />
-        <option value="$PROJECT_DIR$/proto/app/controllers.js" />
         <option value="$PROJECT_DIR$/proto/templates/providerDashboard.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/proto/templates/providerRequests.html" />
+        <option value="$PROJECT_DIR$/proto/app/controllers.js" />
       </list>
     </option>
   </component>
@@ -321,7 +327,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34393063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34393063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -434,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proto/app/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="74" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.0" vertical-offset="1665" max-vertical-offset="13440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="403">
@@ -459,6 +458,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto/app/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="1484" selection-end="1696" vertical-scroll-proportion="1.0296412" vertical-offset="150" max-vertical-offset="11580">
+          <folding>
+            <element signature="e#2825#2846#0" expanded="false" />
+            <element signature="e#5407#8441#0" expanded="false" />
+            <element signature="e#8548#8556#0" expanded="false" />
+            <element signature="e#8646#9239#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

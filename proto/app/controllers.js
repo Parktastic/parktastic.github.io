@@ -7,8 +7,8 @@ define([
 
     //the login controller
     app.controller('LoginCtrl', [
-        "$ionicPopup", "$scope", "$state", "Auth", "$rootScope", "$ionicLoading", "Facebook", "FacebookConnect", "UserId", "DataRecord",
-        function($ionicPopup, $scope, $state, Auth, $rootScope, $ionicLoading, Facebook, FacebookConnect, UserId, DataRecord){
+        "$ionicPopup", "$scope", "$state", "Auth", "$rootScope", "$ionicLoading",
+        function($ionicPopup, $scope, $state, Auth, $rootScope, $ionicLoading){
 
             $rootScope.title = "Login";
 
@@ -17,12 +17,34 @@ define([
 
                 var slowInternetFlagged = false;
 
+                setTimeout(function(){
+
+                    if($rootScope.user == null)
+                    {
+                        slowInternetFlagged = true;
+
+                        //stop the toast
+                        $ionicLoading.hide();
+
+                        //tell user we are experiencing connectivity user
+                        $ionicPopup.alert({
+                            title: 'Login',
+                            template: 'Something went wrong during the login. Please try again.'
+                        });
+                    }
+
+
+                }, 10000);
+
                 $ionicLoading.show({
                     template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Authenticating...</p>'
                 });
 
                 //signup a user given the details we have
                 Auth.login(credentials, function(result){
+
+                    //stop the toast
+                    $ionicLoading.hide();
 
                     //if slow internet, discard login call
                     if(slowInternetFlagged)
@@ -31,8 +53,6 @@ define([
                         return;
                     }
 
-                    //stop the toast
-                    $ionicLoading.hide();
 
                     //tell user of successful login
                     if(result != false)
