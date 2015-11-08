@@ -148,6 +148,25 @@ define([
             // An alert dialog
             $scope.signUp = function(registration) {
 
+                var slowInternetFlagged = false;
+
+                setTimeout(function(){
+
+                    if($rootScope.user == null)
+                    {
+                        slowInternetFlagged = true;
+
+                        //stop the toast
+                        $ionicLoading.hide();
+
+                        //tell user we are experiencing connectivity user
+                        $ionicPopup.alert({
+                            title: 'Login',
+                            template: 'Something went wrong during the registration. Please try again.'
+                        });
+                    }
+                }, 10000);
+
                 $ionicLoading.show({
                     template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Please wait while we register you in the system..</p>'
                 });
@@ -155,7 +174,15 @@ define([
                 //signup a user given the details we have
                 Auth.signUp(registration, function(result){
 
+                    //stop the toast
                     $ionicLoading.hide();
+
+                    //if slow internet, discard login call
+                    if(slowInternetFlagged)
+                    {
+                        slowInternetFlagged = false;
+                        return;
+                    }
 
                     //tell user of successful login
                     if(result != null)
@@ -726,13 +753,17 @@ define([
                         });
                     }else
                     {
-                        var popup = $ionicPopup.alert({
-                            title: 'Call',
-                            scope: $scope,
-                            template: '<twilio-dialer phone="' + request.patient.phone + '"></twilio-dialer>'
+                        $scope.phone = request.patient.phone;
+
+                        var popup = $ionicPopup.show({
+                            template: '<twilio-dialer phone="' + $stateParams["number"] + '"></twilio-dialer>',
+                            title: '<h4>Call</h4>',
+                            scope: $scope
                         });
 
-                        $scope.closePopup = popup.close;
+                        $scope.closePopup = function(){
+                            popup.close();
+                        };
                     }
                 },
                 callbackIntervals : callBackOptions
