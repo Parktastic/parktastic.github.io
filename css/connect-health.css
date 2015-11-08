@@ -16,6 +16,7 @@ body{
 .navbar-inverse .navbar-nav>li>a{
     color: #424242;
     font-weight: 600;
+    font-family: 'Titillium Web', sans-serif !important;
 }
 .cnh-logo{
     width: auto;
@@ -35,7 +36,8 @@ body{
 .jumbotron{
     height: 80vh;
     height: calc(100vh - 120px) !important;
-    background: url("../images/hero-image.jpg") no-repeat center center fixed;
+    background: url("../images/cnh-visual.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 .jumbotron h1{
     margin: 0;
@@ -123,6 +125,7 @@ body{
     text-transform: uppercase;
     color: #424242;
     padding-bottom: 8px;
+    font-family: 'Titillium Web', sans-serif !important;
 }
 .benefit p{
     font-size: 16px;
@@ -151,6 +154,7 @@ body{
 .feature h3{
     font-size: 16px !important;
     padding-bottom: 8px;
+    font-family: 'Titillium Web', sans-serif !important;
 }
 
 .feature p{
