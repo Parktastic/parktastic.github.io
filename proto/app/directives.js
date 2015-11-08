@@ -12,8 +12,6 @@ define([
                 templateUrl : "templates/call.html",
                 controller  : function($scope, $stateParams, TwilioService){
 
-                    console.log($scope);
-
                     //call the phone specified
                     TwilioService.call($scope.phone);
 

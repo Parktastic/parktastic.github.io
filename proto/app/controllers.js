@@ -148,6 +148,28 @@ define([
             // An alert dialog
             $scope.signUp = function(registration) {
 
+                if($scope.registration.password != $scope.confirmedPassword)
+                {
+                    //tell user we are experiencing connectivity user
+                    $ionicPopup.alert({
+                        title: 'Login',
+                        template: 'Username and password do not match!'
+                    });
+
+                    return;
+                }
+
+                if($scope.registration.password == "")
+                {
+                    //tell user we are experiencing connectivity user
+                    $ionicPopup.alert({
+                        title: 'Login',
+                        template: 'No password specified!'
+                    });
+
+                    return;
+                }
+
                 var slowInternetFlagged = false;
 
                 setTimeout(function(){
@@ -933,11 +955,35 @@ define([
     ]);
 
     //secure controller
-    app.controller('SecureController', [
-        "$scope",
-        function($scope){
+    app.controller('FeedbackController', [
+        "$scope", "Feedback", "$ionicPopup", "$rootScope", "$state",
+        function($scope, Feedback, $ionicPopup, $rootScope, $state){
 
-            $scope.accessToken = JSON.parse(window.localStorage.getItem("imgur")).oauth.access_token;
+            //record feedback
+            $scope.recordFeedback = function(feedback){
+                var feedback = {
+                    date : Date.now(),
+                    feedback : feedback,
+                    user : $rootScope.user
+                };
+
+                Feedback.push(feedback);
+
+                var popup = $ionicPopup.alert(
+                    {
+                        template: "Thank you for your feedback :)"
+                    }
+                );
+
+                //
+                popup.then(function(){
+                    if($rootScope.user.userType == "doctor")
+                        $state.transitionTo("providerDashboard");
+                    else
+                        $state.transitionTo("consumerDashboard");
+
+                });
+            };
         }
     ]);
 });

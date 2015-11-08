@@ -131,6 +131,18 @@ define([
         }
     ]);
 
+  //factory to process our payments
+    app.factory('Feedback', [
+        'configs', 'Users',
+        function(configs){
+
+            var ref = new Firebase(configs.firebaseUrl).child("Feedback");
+
+            return ref;
+
+        }
+    ]);
+
     //factory to save service request
     app.factory('ServiceRequest', [
         'configs',

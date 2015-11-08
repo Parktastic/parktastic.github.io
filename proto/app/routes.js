@@ -125,9 +125,10 @@ define([
                 url: '/profile',
                 templateUrl: 'templates/user-profile.html'
             })
-            .state('secure', {
-                url: '/secure',
-                templateUrl: 'templates/secure.html'
+            .state('feedback', {
+                url: '/feedback',
+                templateUrl: 'templates/feedback.html',
+                controller : 'FeedbackController'
             })
             .state('chats', {
                 url: '/chats',
