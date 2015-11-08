@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="74a86340-e4e6-433b-a0f3-1a4666e2bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/templates/providerDashboard.html" afterPath="$PROJECT_DIR$/proto/templates/providerDashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/templates/providerRequests.html" afterPath="$PROJECT_DIR$/proto/templates/providerRequests.html" />
     </list>
     <ignored path="parktastic.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,10 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="providerDashboard.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="providerDashboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proto/templates/providerDashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="52" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.4695652" vertical-offset="135" max-vertical-offset="855">
+            <state line="23" column="28" selection-start="984" selection-end="984" vertical-scroll-proportion="-12.625" vertical-offset="42" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="providerRequests.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/proto/templates/providerRequests.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
               <folding />
             </state>
           </provider>
@@ -115,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/proto/bower_components/angular-facebook/testapp/index.html" />
         <option value="$PROJECT_DIR$/proto/main.js" />
         <option value="$PROJECT_DIR$/proto/app/app.js" />
         <option value="$PROJECT_DIR$/proto/templates/consumerDashboard.html" />
@@ -131,6 +140,7 @@
         <option value="$PROJECT_DIR$/proto/app/routes.js" />
         <option value="$PROJECT_DIR$/proto/app/controllers.js" />
         <option value="$PROJECT_DIR$/proto/templates/providerDashboard.html" />
+        <option value="$PROJECT_DIR$/proto/templates/providerRequests.html" />
       </list>
     </option>
   </component>
@@ -337,11 +347,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/proto/app/boot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="664" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proto/templates/call.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="8" selection-start="53" selection-end="53" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="165" />
@@ -438,7 +443,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proto/templates/providerDashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="52" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.4695652" vertical-offset="135" max-vertical-offset="855">
+        <state line="23" column="28" selection-start="984" selection-end="984" vertical-scroll-proportion="-12.625" vertical-offset="42" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto/templates/providerRequests.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
           <folding />
         </state>
       </provider>
