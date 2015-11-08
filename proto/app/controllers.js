@@ -32,8 +32,6 @@ define([
                             template: 'Something went wrong during the login. Please try again.'
                         });
                     }
-
-
                 }, 10000);
 
                 $ionicLoading.show({
