@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="74a86340-e4e6-433b-a0f3-1a4666e2bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/app/controllers.js" afterPath="$PROJECT_DIR$/proto/app/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/app/routes.js" afterPath="$PROJECT_DIR$/proto/app/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/templates/signup.html" afterPath="$PROJECT_DIR$/proto/templates/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="parktastic.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +28,19 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proto/app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="287" column="24" selection-start="10990" selection-end="10990" vertical-scroll-proportion="0.41602466" vertical-offset="4035" max-vertical-offset="13755">
+            <state line="144" column="44" selection-start="5754" selection-end="5754" vertical-scroll-proportion="0.22958398" vertical-offset="106" max-vertical-offset="11100">
+              <folding>
+                <element signature="e#155#5340#0" expanded="false" />
+                <element signature="e#9788#11763#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proto/templates/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="54" selection-start="1575" selection-end="1575" vertical-scroll-proportion="-12.5" vertical-offset="90" max-vertical-offset="1155">
               <folding />
             </state>
           </provider>
@@ -42,6 +50,24 @@
         <entry file="file://$PROJECT_DIR$/proto/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="25" column="0" selection-start="675" selection-end="675" vertical-scroll-proportion="-11.958333" vertical-offset="88" max-vertical-offset="750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proto/app/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="27" selection-start="2145" selection-end="2145" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proto/app/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="31" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="2310">
               <folding />
             </state>
           </provider>
@@ -74,12 +100,12 @@
         <option value="$PROJECT_DIR$/proto/templates/providerDashboard.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/proto/templates/providerRequests.html" />
-        <option value="$PROJECT_DIR$/proto/app/services.js" />
         <option value="$PROJECT_DIR$/proto/templates/call.html" />
         <option value="$PROJECT_DIR$/proto/app/directives.js" />
         <option value="$PROJECT_DIR$/proto/app/routes.js" />
         <option value="$PROJECT_DIR$/proto/templates/signup.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/proto/app/services.js" />
         <option value="$PROJECT_DIR$/proto/app/controllers.js" />
       </list>
     </option>
@@ -145,6 +171,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="proto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parktastic.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parktastic.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,13 +357,6 @@
         <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proto/app/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="35" selection-start="4781" selection-end="4799" vertical-scroll-proportion="0.0" vertical-offset="1864" max-vertical-offset="4035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proto/templates/paymentMethod.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
@@ -337,20 +374,6 @@
     <entry file="file://$PROJECT_DIR$/proto/templates/providerDashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="16" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proto/app/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="31" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="2310">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proto/templates/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="62" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1155">
           <folding />
         </state>
       </provider>
@@ -383,10 +406,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/proto/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="54" selection-start="1575" selection-end="1575" vertical-scroll-proportion="-12.5" vertical-offset="90" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto/app/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="27" selection-start="2145" selection-end="2145" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proto/app/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="31" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="218" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/proto/app/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="287" column="24" selection-start="10990" selection-end="10990" vertical-scroll-proportion="0.41602466" vertical-offset="4035" max-vertical-offset="13755">
-          <folding />
+        <state line="144" column="44" selection-start="5754" selection-end="5754" vertical-scroll-proportion="0.22958398" vertical-offset="106" max-vertical-offset="11100">
+          <folding>
+            <element signature="e#155#5340#0" expanded="false" />
+            <element signature="e#9788#11763#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

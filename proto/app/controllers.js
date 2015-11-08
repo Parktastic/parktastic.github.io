@@ -142,7 +142,7 @@ define([
             $scope.facebookMode = false;
 
             $scope.registration = {
-                userType : $stateParams["u"] == "d" ? "doctor" : "consumer"
+                userType : $stateParams["u"]
             };
 
             // An alert dialog
