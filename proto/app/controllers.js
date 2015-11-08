@@ -285,7 +285,6 @@ define([
                     var paymentData = {
                         patient : $rootScope.user,
                         doctor  : doctor.info,
-                        fee     : doctor.info.fee,
                         date    : Date.now(),
                         details : paymentDetails
                     };
@@ -295,6 +294,8 @@ define([
 
                     //save the initial payment
                     Payments.push(paymentData);
+
+                    console.log("complete payment");
 
                     //popup to show save was done
                     var alertPopup = $ionicPopup.alert({

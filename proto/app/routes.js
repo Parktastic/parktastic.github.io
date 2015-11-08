@@ -31,7 +31,7 @@ define([
                     requiresLogin : false
                 },
                 params : {
-                    u : "d"
+                    u : "doctor"
                 }
             })
 
