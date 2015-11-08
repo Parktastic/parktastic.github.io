@@ -644,7 +644,7 @@ define([
 
     //appointment response controller
     app.controller('CallResponseController', [
-        "$scope", "$ionicPopup", "$state", "Messages", "$stateParams", "DataRecord",
+        "$scope", "$ionicPopup", "$state", "Messages", "$stateParams", "EditableDataRecord",
         function($scope, $ionicPopup, $state, Messages, $stateParams, DataRecord){
 
             //local vars
