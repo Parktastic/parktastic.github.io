@@ -18,7 +18,7 @@
                     ng-repeat="doc in doctors | filter:search"
                     ui-sref="services({ doctor : doc })">
                 <img src="img/avatar-1-128.jpg">
-                <h2>Dr. {{doc.info.names}}</h2>
+                <h2>{{doc.info.names}}</h2>
                 <p>{{doc.info.speciality}}</p>
             </a>
         </ion-list>
