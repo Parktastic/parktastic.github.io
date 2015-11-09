@@ -146,9 +146,12 @@ define([
             };
 
             // An alert dialog
-            $scope.signUp = function(registration) {
+            $scope.signUp = function(registration, confirmedPassword) {
 
-                if($scope.registration.password != $scope.confirmedPassword)
+                console.log($scope.registration.password);
+                console.log(confirmedPassword);
+
+                if($scope.registration.password != confirmedPassword)
                 {
                     //tell user we are experiencing connectivity user
                     $ionicPopup.alert({
