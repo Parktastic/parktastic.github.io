@@ -143,9 +143,6 @@ define([
             // An alert dialog
             $scope.signUp = function(registration, confirmedPassword) {
 
-                console.log($scope.registration.password);
-                console.log(confirmedPassword);
-
                 if($scope.registration.password != confirmedPassword)
                 {
                     //tell user we are experiencing connectivity user
@@ -163,6 +160,17 @@ define([
                     $ionicPopup.alert({
                         title: 'Login',
                         template: 'No password specified!'
+                    });
+
+                    return;
+                }
+
+                if($scope.registration.email == "")
+                {
+                    //tell user we are experiencing connectivity user
+                    $ionicPopup.alert({
+                        title: 'Login',
+                        template: 'You must supply an email in-order to sign up to the system'
                     });
 
                     return;
