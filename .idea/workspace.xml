@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="74a86340-e4e6-433b-a0f3-1a4666e2bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/app/controllers.js" afterPath="$PROJECT_DIR$/proto/app/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto/app/services.js" afterPath="$PROJECT_DIR$/proto/app/services.js" />
     </list>
     <ignored path="parktastic.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,14 +28,14 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proto/app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="41" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.28197226" vertical-offset="522" max-vertical-offset="11745">
+            <state line="21" column="49" selection-start="585" selection-end="585" vertical-scroll-proportion="0.39291218" vertical-offset="60" max-vertical-offset="11745">
               <folding>
-                <element signature="e#5283#10092#0" expanded="false" />
-                <element signature="e#10199#10207#0" expanded="false" />
-                <element signature="e#10297#10890#0" expanded="false" />
-                <element signature="e#10977#10985#0" expanded="false" />
-                <element signature="e#11059#11396#0" expanded="false" />
-                <element signature="e#11472#13447#0" expanded="false" />
+                <element signature="e#5311#10120#0" expanded="false" />
+                <element signature="e#10227#10235#0" expanded="false" />
+                <element signature="e#10325#10918#0" expanded="false" />
+                <element signature="e#11005#11013#0" expanded="false" />
+                <element signature="e#11087#11424#0" expanded="false" />
+                <element signature="e#11500#13475#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -427,14 +426,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proto/app/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="41" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.28197226" vertical-offset="522" max-vertical-offset="11745">
+        <state line="21" column="49" selection-start="585" selection-end="585" vertical-scroll-proportion="0.39291218" vertical-offset="60" max-vertical-offset="11745">
           <folding>
-            <element signature="e#5283#10092#0" expanded="false" />
-            <element signature="e#10199#10207#0" expanded="false" />
-            <element signature="e#10297#10890#0" expanded="false" />
-            <element signature="e#10977#10985#0" expanded="false" />
-            <element signature="e#11059#11396#0" expanded="false" />
-            <element signature="e#11472#13447#0" expanded="false" />
+            <element signature="e#5311#10120#0" expanded="false" />
+            <element signature="e#10227#10235#0" expanded="false" />
+            <element signature="e#10325#10918#0" expanded="false" />
+            <element signature="e#11005#11013#0" expanded="false" />
+            <element signature="e#11087#11424#0" expanded="false" />
+            <element signature="e#11500#13475#0" expanded="false" />
           </folding>
         </state>
       </provider>

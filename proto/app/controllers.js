@@ -19,7 +19,7 @@ define([
 
                 setTimeout(function(){
 
-                    if(showConnectionProblems)
+                    if(showConnectionProblems && $rootScope.user == null )
                     {
                         //disable showing of connection problems
                         showConnectionProblems = false;
