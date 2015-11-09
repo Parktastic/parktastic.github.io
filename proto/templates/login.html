@@ -1,18 +1,29 @@
-<ion-view title="Login" ng-init="credentials={ email : '', password : '' }">
+<ion-view title="Login" ng-init="credentials={}">
     <ion-content padding="true" class="has-header">
-        <form class="list">
+        <form class="list" novalidate name="loginForm">
             <ion-list>
                 <label class="item item-input">
                     <span class="input-label">Username</span>
-                    <input type="text" ng-model="credentials.email" placeholder="Enter your email address">
+                    <input type="email"
+                           name="username"
+                           ng-model="credentials.email"
+                           placeholder="Enter your email address"
+                           required>
                 </label>
                 <label class="item item-input">
                     <span class="input-label">Password</span>
-                    <input type="password" ng-model="credentials.password" placeholder="">
+                    <input type="password"
+                           name="password"
+                           ng-model="credentials.password"
+                           placeholder=""
+                           required>
                 </label>
             </ion-list>
             <div class="spacer" style="width: 300px; height: 0px;"></div>
-            <button class="button button-balanced button-block" ng-click="login(credentials)">Log in</button>
+            <button type="submit"
+                    class="button button-balanced button-block"
+                    ng-disabled="!loginForm.$valid"
+                    ng-click="login(credentials)">Log in</button>
         </form>
         <div class="spacer" style="width: 300px; height: 40px;"></div>
         <!--<div class="row">-->

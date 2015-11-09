@@ -153,7 +153,7 @@ define([
                     //tell user we are experiencing connectivity user
                     $ionicPopup.alert({
                         title: 'Login',
-                        template: 'Username and password do not match!'
+                        template: 'The passwords you entered do not match!'
                     });
 
                     return;
