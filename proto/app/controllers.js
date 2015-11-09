@@ -15,13 +15,14 @@ define([
             // An alert dialog
             $scope.login = function(credentials) {
 
-                var slowInternetFlagged = false;
+                var showConnectionProblems = true;
 
                 setTimeout(function(){
 
-                    if($rootScope.user == null)
+                    if(showConnectionProblems)
                     {
-                        slowInternetFlagged = true;
+                        //disable showing of connection problems
+                        showConnectionProblems = false;
 
                         //stop the toast
                         $ionicLoading.hide();
@@ -41,16 +42,10 @@ define([
                 //signup a user given the details we have
                 Auth.login(credentials, function(result){
 
+                    console.log(result);
+
                     //stop the toast
                     $ionicLoading.hide();
-
-                    //if slow internet, discard login call
-                    if(slowInternetFlagged)
-                    {
-                        slowInternetFlagged = false;
-                        return;
-                    }
-
 
                     //tell user of successful login
                     if(result != false)
@@ -137,8 +132,8 @@ define([
 
     //the signup controller
     app.controller('signupCtrl', [
-        "$ionicPopup", "$scope", "Auth", "$state", "$ionicLoading", "Facebook", "FacebookConnect", "$stateParams",
-        function($ionicPopup, $scope, Auth, $state, $ionicLoading, Facebook, FacebookConnect, $stateParams) {
+        "$ionicPopup", "$scope", "Auth", "$state", "$ionicLoading", "Facebook", "FacebookConnect", "$stateParams","$rootScope",
+        function($ionicPopup, $scope, Auth, $state, $ionicLoading, Facebook, FacebookConnect, $stateParams,$rootScope) {
             $scope.facebookMode = false;
 
             $scope.registration = {

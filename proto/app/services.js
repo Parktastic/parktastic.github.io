@@ -91,7 +91,9 @@ define([
                             email    : credentials.email,
                             password : credentials.password
                         }, function(error, authData) {
+
                             if (error) {
+                                console.log(error);
                                 callback(false);
                             } else {
                                 Users.setCurrentUser(credentials.email, authData , callback);
