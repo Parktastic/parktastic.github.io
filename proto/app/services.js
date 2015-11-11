@@ -21,8 +21,8 @@ define([
 
     //factory to resolve user data in the app
     app.factory('Users', [
-        "configs", "$rootScope", "UserId", "UserRecord",
-        function(configs, $rootScope, UserId, UserRecord){
+        "configs", "$rootScope",
+        function(configs, $rootScope){
 
             //local firebase reference and data holder
             var ref = new Firebase(configs.firebaseUrl).child("users"),
@@ -53,55 +53,69 @@ define([
         }
     ]);
 
+    //authentication factory
     app.factory('Auth', [
-        "Users", "configs", "UserId",
-        function(Users, configs, UserId){
+        "Users", "configs", "$q",
+        function(Users, configs, $q){
 
             var auth = {
-                signUp  : function(registrationDetails, callback){
+                signUp  : function(registrationDetails){
 
-                    console.log(UserId(registrationDetails.email));
+                    return $q(function(resolve, reject) {
 
-                    //first create user in database
-                    Users.ref.child(UserId(registrationDetails.email)).set({
-                        "info"  :   registrationDetails,
-                        "date"  :   Date.now(),
-                        "active":   true
-                    });
+                        setTimeout(function(){
+                            //this represents a connection timeout
+                            reject("Connection timed out");
+                        }, 10000);
 
-                    //add user to the database
-                    var ref = new Firebase(configs.firebaseUrl);
+                        //first create user in database
+                        Users.ref.push({
+                            "info"  :   registrationDetails,
+                            "date"  :   Date.now(),
+                            "active":   true
+                        });
 
-                    ref.createUser({
-                        email    : registrationDetails.email,
-                        password : registrationDetails.password
-                    }, function(error, userData) {
-                        if (error) {
-                            callback(false);
-                        } else {
-                            callback(userData);
-                        }
+                        //add user to the database
+                        var ref = new Firebase(configs.firebaseUrl);
+
+                        ref.createUser({
+                            email    : registrationDetails.email,
+                            password : registrationDetails.password
+                        }, function(error, userData) {
+                            if (error) {
+                                reject(error);
+                            } else {
+                                resolve(userData);
+                            }
+                        });
                     });
                 },
-                login   : function(credentials, callback){
+                login   : function(credentials){
 
-                    var ref = new Firebase(configs.firebaseUrl);
-                    ref.authWithPassword(
-                        {
-                            email    : credentials.email,
-                            password : credentials.password
-                        }, function(error, authData) {
+                    return $q(function(resolve, reject) {
 
-                            if (error) {
-                                console.log(error);
-                                callback(false);
-                            } else {
-                                Users.setCurrentUser(credentials.email, authData , callback);
+                        setTimeout(function(){
+                            //this represents a connection timeout
+                            reject("Unable to connect to our servers");
+                        }, 10000);
+
+                        var ref = new Firebase(configs.firebaseUrl);
+                        ref.authWithPassword(
+                            {
+                                email    : credentials.email,
+                                password : credentials.password
+                            }, function(error, authData) {
+
+                                if (error) {
+                                    reject(error);
+                                } else {
+                                    Users.setCurrentUser(credentials.email, authData , resolve);
+                                }
+                            }, {
+                                remember: "sessionOnly"
                             }
-                         }, {
-                            remember: "sessionOnly"
-                        }
-                    );
+                        );
+                    });
                 }
             };
 

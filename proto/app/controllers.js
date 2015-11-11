@@ -15,41 +15,20 @@ define([
             // An alert dialog
             $scope.login = function(credentials) {
 
-                var showConnectionProblems = true;
-
-                setTimeout(function(){
-
-                    if(showConnectionProblems && $rootScope.user == null )
-                    {
-                        //disable showing of connection problems
-                        showConnectionProblems = false;
-
-                        //stop the toast
-                        $ionicLoading.hide();
-
-                        //tell user we are experiencing connectivity user
-                        $ionicPopup.alert({
-                            title: 'Login',
-                            template: 'Something went wrong during the login. Please try again.'
-                        });
-                    }
-                }, 10000);
-
                 $ionicLoading.show({
                     template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Authenticating...</p>'
                 });
 
                 //signup a user given the details we have
-                Auth.login(credentials, function(result){
+                var login = Auth.login(credentials);
 
-                    console.log(result);
+                login.then(
+                    function signupWentThrough(result){
 
-                    //stop the toast
-                    $ionicLoading.hide();
+                        //stop the toast
+                        $ionicLoading.hide();
 
-                    //tell user of successful login
-                    if(result != false)
-                    {
+                        //tell user of successful login
                         $scope.credentials = {};
                         var alertPopup = $ionicPopup.alert({
                             title: 'Login',
@@ -62,18 +41,22 @@ define([
                             else
                                 $state.go("consumerDashboard");
                         });
-                    }else
-                    {
-                        var alertPopup = $ionicPopup.alert({
-                            title: 'Login',
-                            template: 'Invalid username or password. Please try again.'
-                        });
-                        alertPopup.then(function(res) {
+                    },
+                    function errorOccured(error){
 
+                        //stop the toast
+                        $ionicLoading.hide();
+
+                        var popup = $ionicPopup.alert({
+                            title: 'Login',
+                            template: error
+                        });
+
+                        popup.then(function(res){
+                            $ionicLoading.hide();
                         });
                     }
-                });
-
+                );
             };
 
             //login with facebook
@@ -176,64 +159,52 @@ define([
                     return;
                 }
 
-                var slowInternetFlagged = false;
-
-//                setTimeout(function(){
-//
-//                    if($rootScope.user == null)
-//                    {
-//                        slowInternetFlagged = true;
-//
-//                        //stop the toast
-//                        $ionicLoading.hide();
-//
-//                        //tell user we are experiencing connectivity user
-//                        $ionicPopup.alert({
-//                            title: 'Login',
-//                            template: 'Something went wrong during the registration. Please try again.'
-//                        });
-//                    }
-//                }, 10000);
-
                 $ionicLoading.show({
                     template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Please wait while we register you in the system..</p>'
                 });
 
                 //signup a user given the details we have
-                Auth.signUp(registration, function(result){
+                var signup = Auth.signUp(registration);
 
-                    //stop the toast
-                    $ionicLoading.hide();
+                signup.then(
+                    function signupWentThrough(result){
 
-//                    //if slow internet, discard login call
-//                    if(slowInternetFlagged)
-//                    {
-//                        slowInternetFlagged = false;
-//                        return;
-//                    }
+                        //stop the toast
+                        $ionicLoading.hide();
 
-                    //tell user of successful login
-                    if(result != null)
-                    {
-                        $scope.registration = { userType : 'doctor' };
-                        var alertPopup = $ionicPopup.alert({
+                        //tell user of successful login
+                        if(result != false)
+                        {
+                            $scope.registration = { userType : 'doctor' };
+                            var alertPopup = $ionicPopup.alert({
+                                title: 'Registration',
+                                template: 'Registration complete!. Proceed to login.'
+                            });
+                            alertPopup.then(function(res) {
+                                $state.go('login');
+                            });
+                        }else
+                        {
+                            $ionicPopup.alert({
+                                title: 'Registration',
+                                template: 'Something went wrong with your registration. Please try again'
+                            });
+                        }
+                    },
+                    function timeoutOccured(error){
+
+                        //stop the toast
+                        $ionicLoading.hide();
+
+                        console.log(error);
+
+                        $ionicPopup.alert({
                             title: 'Registration',
-                            template: 'Registration complete!. Proceed to login.'
-                        });
-                        alertPopup.then(function(res) {
-                            $state.go('login');
-                        });
-                    }else
-                    {
-                        var alertPopup = $ionicPopup.alert({
-                            title: 'Registration',
-                            template: 'Something went wrong with your registration. Please try again'
-                        });
-                        alertPopup.then(function(res) {
-
+                            template: 'There was a problem connecting to our servers. Please try again later'
                         });
                     }
-                });
+                );
+
             };
 
 //            //login with facebook
