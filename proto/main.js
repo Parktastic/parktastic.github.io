@@ -13,12 +13,14 @@ require.config({
         'angularFire' : '../lib/angularfire.min',
         'moment' : '../lib/moment.min',
         'resource' : '../lib/angular-resource.min',
-        'twilio' : '//static.twilio.com/libs/twiliojs/1.2/twilio.min'
+        'twilio' : '//static.twilio.com/libs/twiliojs/1.2/twilio.min',
+        'messages' : '../lib/angular-messages.min'
     },
     shim: {
         'firebase': ['ionic'],
         'angularFire' : [ 'ionic' ],
         'resource' : [ 'ionic' ],
-        'af' : [ 'ionic' ]
+        'af' : [ 'ionic' ],
+        'messages' : [ 'ionic' ]
     }
 });

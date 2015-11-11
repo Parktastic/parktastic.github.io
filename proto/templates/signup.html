@@ -1,6 +1,6 @@
 <ion-view title="Registration" ng-init="confirmedPassword=''">
     <ion-content padding="true" scroll="true" class="has-header">
-        <form class="list">
+        <form class="list" name="signUpForm">
             <ion-list>
                 <!--<div class="item item-divider">-->
                     <!--I am a-->
@@ -14,8 +14,11 @@
                 <!--<button class="button button-positive button-block" ng-show="!facebookMode" ng-click="facebookLogin()">Connect with Facebook</button>-->
                 <label class="item item-input">
                     <span class="input-label">Names</span>
-                    <input type="text" ng-model="registration.names" placeholder="">
+                    <input type="text" name="names" ng-model="registration.names" placeholder="">
                 </label>
+                <div class="form-errors" ng-messages="signUpForm.names.$error" ng-messages-include="templates/form-errors.html">
+                    <div class="form-error" ng-message="required">User's names are required for signup</div>
+                </div>
                 <label class="item item-input">
                     <span class="input-label">Email</span>
                     <input type="text" ng-model="registration.email" placeholder="">

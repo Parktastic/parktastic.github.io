@@ -165,7 +165,7 @@ define([
                     return;
                 }
 
-                if($scope.registration.email == "")
+                if($scope.registration.email == "" || $scope.registration.email == null)
                 {
                     //tell user we are experiencing connectivity user
                     $ionicPopup.alert({
@@ -178,22 +178,22 @@ define([
 
                 var slowInternetFlagged = false;
 
-                setTimeout(function(){
-
-                    if($rootScope.user == null)
-                    {
-                        slowInternetFlagged = true;
-
-                        //stop the toast
-                        $ionicLoading.hide();
-
-                        //tell user we are experiencing connectivity user
-                        $ionicPopup.alert({
-                            title: 'Login',
-                            template: 'Something went wrong during the registration. Please try again.'
-                        });
-                    }
-                }, 10000);
+//                setTimeout(function(){
+//
+//                    if($rootScope.user == null)
+//                    {
+//                        slowInternetFlagged = true;
+//
+//                        //stop the toast
+//                        $ionicLoading.hide();
+//
+//                        //tell user we are experiencing connectivity user
+//                        $ionicPopup.alert({
+//                            title: 'Login',
+//                            template: 'Something went wrong during the registration. Please try again.'
+//                        });
+//                    }
+//                }, 10000);
 
                 $ionicLoading.show({
                     template: '<ion-spinner icon="android" class="spinner-assertive"></ion-spinner><p>Please wait while we register you in the system..</p>'
@@ -205,12 +205,12 @@ define([
                     //stop the toast
                     $ionicLoading.hide();
 
-                    //if slow internet, discard login call
-                    if(slowInternetFlagged)
-                    {
-                        slowInternetFlagged = false;
-                        return;
-                    }
+//                    //if slow internet, discard login call
+//                    if(slowInternetFlagged)
+//                    {
+//                        slowInternetFlagged = false;
+//                        return;
+//                    }
 
                     //tell user of successful login
                     if(result != null)
@@ -269,9 +269,9 @@ define([
     ]);
 
     //provider registration controller
-    app.controller('providerRegistrationCtrl', function($scope) {
+    app.controller('providerRegistrationCtrl', [function($scope) {
 
-    });
+    }]);
 
     //consumer registration controller
     app.controller('consumerRegistrationCtrl', [
@@ -294,9 +294,9 @@ define([
         }]);
 
     //cleint view controller
-    app.controller('clientViewCtrl', function($scope) {
+    app.controller('clientViewCtrl', [function($scope) {
 
-    });
+    }]);
 
     //provider view controller
     app.controller('providerViewCtrl', [
