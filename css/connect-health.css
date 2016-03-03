@@ -14,7 +14,7 @@ body{
 }
 
 .navbar-inverse .navbar-nav>li>a{
-    color: #424242;
+    color: #455A64;
     font-weight: 600;
     font-family: 'Titillium Web', sans-serif !important;
 }
@@ -43,13 +43,13 @@ body{
     margin: 0;
     padding-top: 32px;
     font-family: 'Titillium Web', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .jumbotron p{
     margin: 0;
     padding-top: 48px;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 
@@ -67,9 +67,9 @@ body{
 }
 
 .doc-signup{
-    background-color: #00796B;
+    background-color: #94B71E;
     color: #FFFFFF !important;
-    border: 2px solid #00796B;
+    border: 2px solid #94B71E;
 }
 
 .doc-signup:hover{
@@ -78,9 +78,9 @@ body{
 }
 
 .pat-signup{
-    background-color: #880e47;
+    background-color: #E57373;
     color: #FFFFFF !important;
-    border: 2px solid #880e47;
+    border: 2px solid #E57373;
 }
 
 .pat-signup:hover{
@@ -110,14 +110,14 @@ body{
 .sign-up hr{
     padding-bottom: 32px;
     width: 5%;
-    border-top: 3px solid #00796B;
+    border-top: 3px solid #94B71E;
 }
 
 .benefit i{
     display: block;
     font-size: 40px;
     margin-bottom: 32px;
-    color: #00796B;
+    color: #94B71E;
 }
 
 .benefit h3{
@@ -132,7 +132,7 @@ body{
 }
 
 .features-container{
-    background: #00796B;
+    background: #94B71E;
     padding-bottom: 32px;
 }
 
@@ -166,12 +166,12 @@ body{
 }
 
 footer{
-    background: #424242;
+    background: #455A64;
     color: #FFFFFF;
 }
 
 #back-to-top a {
-    color: #f58623;
+    color: #FFAB40;
 }
 
 @media screen and (min-width: 770px){
@@ -196,7 +196,7 @@ footer{
         background-color: #424242 !important;
     }
     .navbar-toggle:hover{
-        background-color: #880e47 !important;
+        background-color: #E57373 !important;
         border: none;
     }
     .navbar-toggle:hover .icon-bar{

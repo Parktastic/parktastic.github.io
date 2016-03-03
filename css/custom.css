@@ -158,7 +158,7 @@ h3{
 }
 
 .btn-bg-custom-color {
-	background-color: #00796B;
+	background-color: #00796b;
 	color: #fff !important;
 	border-color: rgba(255, 255, 255, 0);
 }
@@ -294,7 +294,7 @@ ul {
 @media (max-width: 1199px) {
 
 	.jumbotron h1 {
-		font-size: 56px;
+		font-size: 48px;
 		margin-bottom: 30px;
 	}
 
