@@ -72,13 +72,11 @@
           <br>introduce telemedicine into your practice and get paid for your expertise
         </p>
             <p>Download the app</p>
-            <br/>
-            <img src="images/google-play-badge-135x40.png" class="pop" data-toggle="popover" title="App in Beta" data-content="This application is in closed beta. Please send an email to support@connecthealth.io to receive an invite link for the app. Use Sign up over the web in the meantime">
-            <img src="images/AppStoreBadge.svg">
+            <img src="images/google-play-badge-135x40.png" class="pop">
+            <img src="images/AppStoreBadge.svg" class="pop">
         <div class="row sign-up">
             <!-- <a class="doc-signup" href="https://app.connecthealth.io/signup">Sign up</a> -->
             <p>or</p>
-            <br/>
             <a class="doc-signup" href="https://app.connecthealth.io/signup">SIGN UP OVER THE WEB</a>
             </div>
         </div>
@@ -202,8 +200,8 @@
         </div>
         <div class="row">
           <p>or</p>
-          <img src="images/google-play-badge-135x40.png">
-          <img src="images/AppStoreBadge.svg">
+          <img src="images/google-play-badge-135x40.png" class="pop">
+          <img src="images/AppStoreBadge.svg" class="pop">
         </div>
       </div>
     </div>
@@ -241,7 +239,9 @@
     <!-- Load intercom -->
     <script src="js/intercom.js"></script>
     <script>
-      $('.pop').popover();
+    $('.pop').click(function(){
+      alert(This application is in closed beta. Please send an email to support@connecthealth.io to receive an invite link for the app. Use Sign up over the web in the meantime);
+    });
     </script>
   </body>
 </html>
