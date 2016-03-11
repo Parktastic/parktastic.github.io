@@ -53,8 +53,8 @@ body{
     font-weight: 400;
 }
 p.or{
-    padding: 0;
-    margin: 15px;
+    padding: 0 !important;
+    margin: 15px !important;
 }
 .cta-btns{
     padding-top: 80px;
