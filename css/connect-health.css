@@ -52,7 +52,10 @@ body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
-
+.or{
+    padding: 0;
+    margin: 15px;
+}
 .cta-btns{
     padding-top: 80px;
 }
