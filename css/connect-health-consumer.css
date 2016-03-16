@@ -39,7 +39,7 @@ h6{
 	font-size:1em;
 }
 .jumbotron {
-    height: calc(100vh - 10px) !important;
+    height: 110vh !important;
     overflow: hidden;
 }
 .banner{
@@ -60,6 +60,12 @@ h6{
 	padding-top: 35px;
     color:rgba(255,255,255,0.8);
 }
+@media screen and (max-width: 600px){
+	.banner .sub-heading{
+    	font-size:18px;
+	}
+}
+
 .banner .download-title{
 	text-transform: uppercase;
 	font-size: 26px;

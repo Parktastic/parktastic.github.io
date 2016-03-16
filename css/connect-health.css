@@ -78,6 +78,12 @@ p.or{
 .google-play{
     margin-right: 30px;
 }
+@media screen and (max-width: 600px){
+    .google-play{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+}
 .cta-btns{
     padding-top: 80px;
 }
@@ -209,6 +215,12 @@ footer .main-links li{
     margin:0;
     padding: 0;
 }
+@media screen and (max-width: 600px){
+    footer .main-links li{
+        width: 100%;
+        padding: 10px 0;
+    }
+}
 
 #back-to-top a {
     color: #FFAB40;
@@ -247,4 +259,11 @@ footer .main-links li{
         display: block;
         margin: 0 10px 16px 10px;
     }
+}
+.navbar-inverse .navbar-nav a{
+    text-transform: uppercase;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #94B71E;
+    background: none;
 }
