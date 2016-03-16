@@ -52,9 +52,31 @@ body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
+.green-text{
+    color:#94B71E !important
+}
+.login {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin:10px 0;
+    text-transform:initial !important;
+    display: inline-block;
+}
+.sign-up .login{
+    color: #585858 !important;
+}
+a.login:hover,a.login:focus{
+    text-decoration: underline;
+}
 p.or{
     padding: 0 !important;
+    font-size: 26px;
     margin: 15px !important;
+}
+.google-play{
+    margin-right: 30px;
 }
 .cta-btns{
     padding-top: 80px;
@@ -173,6 +195,9 @@ footer{
     color: #FFFFFF;
     padding-top: 40px;
     padding-bottom: 20px;
+}
+footer a:hover,footer a:focus{
+    color:#fff;
 }
 
 footer *{

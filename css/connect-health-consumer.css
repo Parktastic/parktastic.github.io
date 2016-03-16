@@ -46,13 +46,19 @@ h6{
 	text-align: center;
 	color: #fff;
 }
+.banner a{
+	color: #fff;
+}
 .banner h1{
-	padding-top: 100px;
+	padding-top: 85px;
 	letter-spacing: 2px;
     word-spacing: 6px;
+    color:rgba(255,255,255,0.8);
 }
 .banner .sub-heading{
 	font-size: 36px;
+	padding-top: 35px;
+    color:rgba(255,255,255,0.8);
 }
 .banner .download-title{
 	text-transform: uppercase;
@@ -71,6 +77,7 @@ h6{
 }
 .how-it-works .text {
 	font-size: 24px;
+	font-weight: 300;
 }
 .how-it-works .text p{
 	margin-bottom: 33px;
@@ -88,10 +95,11 @@ h6{
     text-align: center;
 }
 .features .text{
-	font-size: 24px;
+	font-size: 22px;
 	margin: 60px 0;
 }
 .features .text p{
+	font-weight: 300;
 	text-align: justify;
 }
 .features .icon{
