@@ -171,6 +171,18 @@ p.or{
 footer{
     background: #455A64;
     color: #FFFFFF;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+footer *{
+    color:#fff;
+}
+footer .main-links li{
+    width: 24.7%;
+    text-transform: uppercase;
+    margin:0;
+    padding: 0;
 }
 
 #back-to-top a {
